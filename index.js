@@ -3,29 +3,6 @@ const bot = new Discord.Client();
 const token = process.env.token // a garder en version heroku
 const prefix = ("?");
 
-module.exports = class Ping extends Command {
-  
-  static match(message) {
-    if(message.content === '!help') {
-      return true
-    }
-  }
-  
-  static action(message) {
-    
-    left  help = new  Discord,RichEmbded()
-          .setTitle('HELP')
-          .setDescription('Liste des commandes')
-          .addBlankField()
-          .addField('!ping, 'Renvois pong')
-          .addField('!info, 'Donne des infos')
-          .setColor('0x206694')
-          .setFooter('Fin')
-    
-    message.channel.send(help)
-  }
-}
-
 bot.on('guildMemberAdd', member => {
   member.createDM().then(channel => {
     return channel.send('Bienvenue sur le serveur DévCommu ! Actuellement en Bêta. ' + member.displayName)
