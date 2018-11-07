@@ -2,6 +2,13 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const token = process.env.token // a garder en version heroku
 const prefix = ("?");
+const help = require('./command/help')
+
+bot.on('message'), message => {
+  
+  help.parse(message)
+  
+})
 
 bot.on('guildMemberAdd', member => {
   member.createDM().then(channel => {
