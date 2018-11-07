@@ -4,7 +4,14 @@ module.exports = class ban {
     static match (message) {
       return message.content.startsWith('/ban')
     }
-            
+    
+bot.on('guildMemberAdd', member => {
+    member.createDM().then(channel => {
+        return channel.send('Bienvenue sur le serveur de Alexpgm' + member.displayName)
+        console.log(`${member.displayName} à rejoind le serveur.`)
+    }).catch(console.error)
+});
+    
     static action (message) {
       const args = message.content.slice(prefix.length).split(/ +/);
       const command = args.shift().toLowerCase();
