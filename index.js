@@ -10,6 +10,12 @@ bot.on('guildMemberAdd', member => {
   // On pourrait catch l'erreur autrement ici (l'utilisateur a peut être désactivé les MP)
 })
 
+bot.on('message', message => {
+if (message.content === 'ping') {
+message.reply('Le **BOT** a mis: ' + `[ **${msg.createdTimestamp - message.createdTimestamp}**`+ ' **Ms** ] pour repondre.\nEt l\'**API** a mis: ' + `[ **${Math.round(client.ping)}**`+ ' **Ms** ] pour repondre')
+}
+})
+
 bot.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
     bot.user.setActivity('!help').catch(console.error)    
