@@ -26,6 +26,11 @@ bot.on('message', msg => {
         msg.channel.send("En maintenance")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
+    if (msg.content === prefix + "help"){
+        msg.channel.send("En maintenance")
+        .setColor('0x206694')
+        console.log("")
+    }
 
 });
 
