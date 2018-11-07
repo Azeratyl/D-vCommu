@@ -6,9 +6,8 @@ const prefix = ("?");
 bot.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
     bot.user.setActivity('rien').catch(console.error)
-});
-
-  static void UpdatePresence()
+    
+    static void UpdatePresence()
     {
         DiscordRichPresence discordPresence;
         memset(&discordPresence, 0, sizeof(discordPresence));
@@ -25,6 +24,9 @@ bot.on('ready', function () {
         discordPresence.joinSecret = "MTI4NzM0OjFpMmhuZToxMjMxMjM= ";
         Discord_UpdatePresence(&discordPresence);
     }
+});
+
+  
 
 
 bot.login(token); //a garder en version heroku
