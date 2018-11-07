@@ -28,8 +28,7 @@ bot.on('message', msg => {
     }
     if (msg.content === prefix + "help"){
         msg.channel.send("En maintenance")
-        .setColor('0x206694')
-        console.log("")
+        console.log("r")
     }
 
 });
