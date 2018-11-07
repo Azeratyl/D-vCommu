@@ -2,7 +2,7 @@ const prefix = ("?");
 
 module.exports = class ban {
     static match (message) {
-      return message.content.startsWith('?ban')
+      return message.content.startsWith('/ban')
     }
             
     static action (message) {
@@ -16,4 +16,5 @@ module.exports = class ban {
             reason: `Banni par ${message.author.tag}`
           });
       }
+    //}
 }
