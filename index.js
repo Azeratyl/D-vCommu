@@ -20,7 +20,7 @@ bot.on('guildMemberAdd', member => {
 bot.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
     bot.user.setActivity('!help').catch(console.error)    
-});
+})
 
  
 const ban = require('./kick et ban/ban');
