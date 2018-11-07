@@ -7,11 +7,11 @@ bot.on('ready', function () {
     console.log("Je suis prêt à être utilisé.")
     bot.user.setActivity('rien').catch(console.error)
     
-    static void UpdatePresence()
+     static void UpdatePresence()
     {
         DiscordRichPresence discordPresence;
         memset(&discordPresence, 0, sizeof(discordPresence));
-        discordPresence.state = "Playing Solo";
+        discordPresence.state = "Joue en Solo";
         discordPresence.details = "Competitive";
         discordPresence.startTimestamp = 1507665886;
         discordPresence.endTimestamp = 1507665886;
@@ -20,12 +20,11 @@ bot.on('ready', function () {
         discordPresence.partyId = "ae488379-351d-4a4f-ad32-2b9b01c91657";
         discordPresence.partySize = 1;
         discordPresence.partyMax = 5;
-        discordPresence.spectateSecret = "MTIzNDV8MTIzNDV8MTMyNDU0";
-        discordPresence.joinSecret = "MTI4NzM0OjFpMmhuZToxMjMxMjM= ";
         Discord_UpdatePresence(&discordPresence);
     }
 });
 
+  
   
 
 
