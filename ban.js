@@ -16,5 +16,4 @@ module.exports = class ban {
             reason: `Banni par ${message.author.tag}`
           });
       }
-    //}
 }
